@@ -4,4 +4,10 @@
 
 #pragma once
 
-#include "fourier/complex_detail.hpp"
+#include "fourier/discrete.hpp"
+
+namespace sl::calc {
+
+using fourier::dft;
+
+} // namespace sl::calc

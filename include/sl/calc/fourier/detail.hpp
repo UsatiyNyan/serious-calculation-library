@@ -4,19 +4,25 @@
 
 #pragma once
 
+#include <bit>
 #include <complex>
 #include <numbers>
 #include <type_traits>
 
 namespace sl::calc::fourier {
 enum class direction {
-    forward,
-    backward,
+    time_to_freq,
+    freq_to_time,
 };
+
+namespace detail {
+
+template <std::size_t extent_>
+constexpr bool extent_is_power_of_2 = extent_ == std::dynamic_extent || std::has_single_bit(extent_);
 
 template <direction direction_, typename FloatT>
     requires std::is_floating_point_v<FloatT>
-constexpr FloatT direction_sign_v = static_cast<FloatT>(direction_ == direction::forward ? -1.0 : +1.0);
+constexpr FloatT direction_sign_v = static_cast<FloatT>(direction_ == direction::time_to_freq ? -1.0 : +1.0);
 
 //      2pi * numerator
 // sign ---------------
@@ -35,4 +41,6 @@ template <typename FloatT>
 constexpr auto polar(FloatT theta) {
     return std::complex<FloatT>{ std::cos(theta), std::sin(theta) };
 }
+
+} // namespace detail
 } // namespace sl::calc::fourier
