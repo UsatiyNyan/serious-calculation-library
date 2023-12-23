@@ -4,5 +4,4 @@
 
 #pragma once
 
-#include "sl/calc/bits.hpp"
-#include "sl/calc/fourier.hpp"
+#include "fourier/complex_detail.hpp"
