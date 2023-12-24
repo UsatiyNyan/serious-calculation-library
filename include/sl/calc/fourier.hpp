@@ -5,6 +5,7 @@
 #pragma once
 
 #include "fourier/discrete.hpp"
+#include "fourier/fast.hpp"
 
 namespace sl::calc {
 

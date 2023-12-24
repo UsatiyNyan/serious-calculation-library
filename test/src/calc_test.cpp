@@ -3,3 +3,5 @@
 //
 
 #include "sl/calc.hpp"
+
+#include <gtest/gtest.h>
