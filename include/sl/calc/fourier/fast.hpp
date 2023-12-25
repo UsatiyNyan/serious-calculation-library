@@ -46,4 +46,7 @@ std::vector<std::complex<FloatT>>
     return out;
 }
 
+// TODO: wrap impl
+// TODO: for inverse transform divide output by N
+
 } // namespace sl::calc::fourier

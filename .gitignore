@@ -49,3 +49,6 @@ _deps
 *.exe
 *.out
 *.app
+
+# python
+.ipynb_checkpoints
