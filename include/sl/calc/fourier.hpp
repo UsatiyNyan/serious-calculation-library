@@ -10,5 +10,6 @@
 namespace sl::calc {
 
 using fourier::dft;
+using fourier::fft;
 
 } // namespace sl::calc
