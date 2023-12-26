@@ -51,7 +51,7 @@ void write_test_data(
 template <typename FloatT>
 auto normalize(auto out) {
     const std::size_t N = out.size();
-    for (auto& x: out) {
+    for (auto& x : out) {
         x /= static_cast<FloatT>(N);
     }
     return out;
