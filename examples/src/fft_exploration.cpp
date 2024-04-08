@@ -3,7 +3,7 @@
 //
 
 
-#include <assert.hpp>
+#include <libassert/assert.hpp>
 #include <range/v3/view.hpp>
 
 #include "sl/calc/fourier.hpp"

@@ -6,7 +6,7 @@ cpmaddpackage(
 sl_target_link_system_libraries(${PROJECT_NAME}
         INTERFACE
         # utils
-        assert
+        libassert::assert
 )
 
 # Packages for tests and examples

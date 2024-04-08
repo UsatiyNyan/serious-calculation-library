@@ -9,7 +9,7 @@
 #include <type_traits>
 #include <vector>
 
-#include <assert.hpp>
+#include <libassert/assert.hpp>
 
 #include "sl/calc/bits.hpp"
 #include "sl/calc/fourier/detail.hpp"
