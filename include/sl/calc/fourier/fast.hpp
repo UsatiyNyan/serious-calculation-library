@@ -5,14 +5,13 @@
 #pragma once
 
 #include <complex>
-#include <span>
 #include <type_traits>
 #include <vector>
 
-#include <libassert/assert.hpp>
-
 #include "sl/calc/bits.hpp"
 #include "sl/calc/fourier/detail.hpp"
+
+#include <libassert/assert.hpp>
 
 namespace sl::calc::fourier {
 namespace detail {
@@ -49,7 +48,7 @@ std::vector<std::complex<FloatT>>
 template <direction direction_, typename FloatT, std::size_t extent_>
 std::vector<std::complex<FloatT>> fft_impl(std::span<const std::complex<FloatT>, extent_> in) {
     const std::size_t N = in.size();
-    const std::size_t half_N_bit_width = std::bit_width(N >> 1);
+    const auto half_N_bit_width = static_cast<std::size_t>(std::bit_width(N >> 1));
 
     std::vector<std::complex<FloatT>> out(N);
 

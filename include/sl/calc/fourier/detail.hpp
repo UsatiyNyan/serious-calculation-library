@@ -7,6 +7,7 @@
 #include <bit>
 #include <complex>
 #include <numbers>
+#include <span>
 #include <type_traits>
 
 namespace sl::calc::fourier {

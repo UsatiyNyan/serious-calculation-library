@@ -9,6 +9,7 @@
 #include <numbers>
 #include <type_traits>
 #include <vector>
+#include <span>
 
 #include "sl/calc/fourier/detail.hpp"
 #include <fmt/format.h>
@@ -17,7 +18,7 @@ template <typename T, typename Char>
 struct fmt::formatter<std::complex<T>, Char> : public fmt::formatter<T, Char> {
     template <typename FormatCtx>
     auto format(const std::complex<T>& x, FormatCtx& ctx) const -> decltype(ctx.out()) {
-        return format_to(ctx.out(), "[{}, {}]", x.real(), x.imag());
+        return fmt::format_to(ctx.out(), "[{}, {}]", x.real(), x.imag());
     }
 };
 

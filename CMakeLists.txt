@@ -16,12 +16,13 @@ sl_project_prologue(
 
 project(
         serious-calculation-library
-        VERSION 0.0.1
+        VERSION 0.0.0
         DESCRIPTION "calculation library"
         HOMEPAGE_URL "TODO"
         LANGUAGES C CXX)
 
 add_library(${PROJECT_NAME} INTERFACE)
+add_library(sl::calc ALIAS ${PROJECT_NAME})
 target_include_directories(${PROJECT_NAME} INTERFACE include)
 
 add_subdirectory(dependencies)
