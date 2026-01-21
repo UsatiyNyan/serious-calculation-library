@@ -11,7 +11,7 @@
 #include "sl/calc/bits.hpp"
 #include "sl/calc/fourier/detail.hpp"
 
-#include <libassert/assert.hpp>
+#include <sl/meta/assert.hpp>
 
 namespace sl::calc::fourier {
 namespace detail {

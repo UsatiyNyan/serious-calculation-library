@@ -13,6 +13,7 @@
 
 #include "sl/calc/fourier/detail.hpp"
 #include <fmt/format.h>
+#include <fmt/ranges.h>
 
 template <typename T, typename Char>
 struct fmt::formatter<std::complex<T>, Char> : public fmt::formatter<T, Char> {

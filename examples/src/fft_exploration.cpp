@@ -2,11 +2,10 @@
 // Created by usatiynyan on 12/24/23.
 //
 
-
-#include <libassert/assert.hpp>
-#include <range/v3/view.hpp>
-
 #include "sl/calc/fourier.hpp"
+
+#include <sl/meta/assert.hpp>
+#include <range/v3/view.hpp>
 
 namespace sl::calc::fourier::detail {
 
